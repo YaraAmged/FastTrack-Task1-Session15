@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.1/mustache.min.js"
+      integrity="sha512-3GRj7sme01zpWwRNPNy48Rda1bD9cq34lqYG5vb8ZXGc+wRqsoBJ3+AC25IYW5w5SrWlzHqIpNIxZt5QF9sXLg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.1/mustache.js"
+      integrity="sha512-IDcWx4i9cyu+HgDbPzY7fKV9aOh0Skt1iFFTZype6N1c/Slqwum0UaGX/Ek2ZSS+RNoaGvtGsTPiSVNfMKaffg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="/Scripts/main.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="p-5">
+    <div id="target">Loading...</div>
+    <script id="template" type="x-tmpl-mustache">
+      <h1>Movies</h1>
+      <div class="border border-dark">
+        <h2>Stats</h2>
+        <p>Current pages:{{pageNum}}</p>
+        <p>Number of Movies:{{movieNum}}</p>
+        <p>Top rated movie:{{topMovieName}}</p>
+        <p>Rating:{{rating}}</p>
+      </div>
+      <div class="row">
+        <div class="card col-12 col-sm-3">
+          <img src="{{src}}" class="card-img-top" />
+          <p>{{movieName}}</p>
+          <p>{{movieRating}}</p>
+        </div>
+      </div>
+
+    </script>
+  </body>
+</html>

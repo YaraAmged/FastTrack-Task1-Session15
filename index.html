@@ -28,23 +28,29 @@
   </head>
   <body class="p-5">
     <div id="target">Loading...</div>
+    <div id="moviesTarget">Loading...</div>
     <script id="template" type="x-tmpl-mustache">
       <h1>Movies</h1>
-      <div class="border border-dark">
+      <div class="border border-dark p-3 mt-5 mb-5">
         <h2>Stats</h2>
-        <p>Current pages:{{pageNum}}</p>
-        <p>Number of Movies:{{movieNum}}</p>
-        <p>Top rated movie:{{topMovieName}}</p>
-        <p>Rating:{{rating}}</p>
+        <p>Current pages: {{pageNum}}</p>
+        <p>Number of Movies: {{movieNum}}</p>
+        <p>Top rated movie: {{topMovieName}}</p>
+        <p>Rating: {{rating}}</p>
       </div>
-      <div class="row">
-        <div class="card col-12 col-sm-3">
+    </script>
+    <script id="template2" type="x-tmpl-mustache">
+      <div class="row g-5 p-5">
+        {{#movies}}
+        <div class="col-12 col-sm-3">
+          <div class="card text-center">
           <img src="{{src}}" class="card-img-top" />
           <p>{{movieName}}</p>
           <p>{{movieRating}}</p>
+          </div>
         </div>
+        {{/movies}}
       </div>
-
     </script>
   </body>
 </html>

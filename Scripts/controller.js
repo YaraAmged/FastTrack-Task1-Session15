@@ -3,12 +3,17 @@ class Controller {
     this.model = model;
     window.EventMediator.on("movies.loaded", (data) => {
       this.model.movies = data;
+      this.model.isLoading = false;
+      console.log(this.model.movies);
       window.EventMediator.emit("render");
     });
     this.fetchMovies();
   }
-  getNumOfMovies() {
-    return this.model.movies.length;
+  get modelLoading() {
+    return this.model.isLoading;
+  }
+  get modelData() {
+    return this.model.movies;
   }
   fetchMovies() {
     $.ajax({

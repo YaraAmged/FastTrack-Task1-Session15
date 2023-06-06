@@ -1,0 +1,18 @@
+.modal-content {
+  position: relative;
+  h6 {
+    margin: 25px 0;
+  }
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
+  .close-btn {
+    color: white;
+    position: absolute;
+    transform: translateY(-100%);
+    right: 20px;
+    top: -10px;
+    cursor: pointer;
+  }
+}

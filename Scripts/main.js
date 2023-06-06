@@ -1,7 +1,8 @@
-import { Model } from "./model.js";
+import { CardsView } from "./cardsView.js";
 import { Controller } from "./controller.js";
-import { mainView } from "./mainView.js";
-import { cardView } from "./cardView.js";
+import { ModalView } from "./modalView.js";
+import { Model } from "./model.js";
+import { StatsView } from "./statsView.js";
 
 const EventMediator = {
   events: {},
@@ -23,7 +24,8 @@ window.EventMediator = EventMediator;
 function main() {
   const model = new Model();
   const controller = new Controller(model);
-  new mainView(controller);
-  new cardView(controller);
+  new StatsView(controller);
+  new CardsView(controller);
+  new ModalView(controller);
 }
 main();
